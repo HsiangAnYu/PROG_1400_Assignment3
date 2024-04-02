@@ -2,6 +2,7 @@ package Panel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class CharacterSelecetPanel extends JPanel {
 
@@ -13,10 +14,10 @@ public class CharacterSelecetPanel extends JPanel {
     private JRadioButton charKnightRadio = new JRadioButton("Knight");
     private JRadioButton charShamanRadio = new JRadioButton("Shaman");
     private JTextField characterName = new JTextField();
-    private JTextField characterHP = new JTextField();
-    private JTextField characterMP = new JTextField();
-    private JTextField characterATK = new JTextField();
-    private JTextField characterDEF = new JTextField();
+    private JTextField characterHP = new JTextField(String.valueOf(new Random().nextInt(100,200)));
+    private JTextField characterMP = new JTextField(String.valueOf(new Random().nextInt(100,200)));
+    private JTextField characterATK = new JTextField(String.valueOf(new Random().nextInt(10,20)));
+    private JTextField characterDEF = new JTextField(String.valueOf(new Random().nextInt(10,20)));
     private JButton rerollButton = new JButton("Reroll");
     private JButton selectButton = new JButton("Select");
     private JRadioButton weaponHalberd = new JRadioButton("Halberd");
@@ -143,6 +144,7 @@ public class CharacterSelecetPanel extends JPanel {
         armorScutum.setFont(buttonFont);
         armorAmulet.setBounds(300,650,240,50);
         armorAmulet.setFont(buttonFont);
+        armorChainMail.setSelected(true);
 
         //button group from armor
         ButtonGroup armorRadioGroup = new ButtonGroup();

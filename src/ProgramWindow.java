@@ -30,7 +30,7 @@ public class ProgramWindow extends JFrame {
         });
 
         //this.add(startPage);
-        //this.add(selectPage);
-        this.add(battlePage);
+        this.add(selectPage);
+        //this.add(battlePage);
     }
 }

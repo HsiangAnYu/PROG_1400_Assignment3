@@ -4,33 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5663a1a-f965-411e-a9e9-8f93b6b26baa" name="Changes" comment="GUI2">
-      <change afterPath="$PROJECT_DIR$/Image/Amulet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Archer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Chain Mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Halberd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Ice Wand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Knight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Ninja.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Rapier.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Scutum.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Shaman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character/Archer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character/Knight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character/Monster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character/Ninja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Character/Shaman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Item/Armor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Item/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Item/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PROG_1400_Assignment3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PROG_1400_Assignment3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProgramWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProgramWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panel/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/BattlePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panel/CharacterSelecetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/CharacterSelecetPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panel/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/StartPanel.java" afterDir="false" />
+    <list default="true" id="f5663a1a-f965-411e-a9e9-8f93b6b26baa" name="Changes" comment="class">
+      <change beforePath="$PROJECT_DIR$/src/Item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel/CharacterSelecetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/CharacterSelecetPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +50,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\_IT 2023_winter\PROG1400\PROG_1400_Assignment3\Image" />
       <recent name="F:\_IT 2023_winter\PROG1400\PROG_1400_Assignment3" />
       <recent name="F:\_IT 2023_winter\PROG1400\PROG_1400_Assignment3\src" />
       <recent name="F:\_IT 2023_winter\PROG1400\PROG_1400_Assignment3\src\Image" />
@@ -117,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712024691786</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="class">
+      <option name="closed" value="true" />
+      <created>1712032209964</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712032209964</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +122,7 @@
     <MESSAGE value="first" />
     <MESSAGE value="GUI" />
     <MESSAGE value="GUI2" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI2" />
+    <MESSAGE value="class" />
+    <option name="LAST_COMMIT_MESSAGE" value="class" />
   </component>
 </project>
