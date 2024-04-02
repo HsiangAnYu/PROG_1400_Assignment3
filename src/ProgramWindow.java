@@ -1,3 +1,4 @@
+import panel.BattlePanel;
 import panel.StartPanel;
 import panel.CharacterSelecetPanel;
 
@@ -17,6 +18,7 @@ public class ProgramWindow extends JFrame {
 
         StartPanel startPage = new StartPanel();
         CharacterSelecetPanel selectPage = new CharacterSelecetPanel();
+        BattlePanel battlePage = new BattlePanel();
 
 
         startPage.getStartBotton().addActionListener(new ActionListener() {
@@ -29,5 +31,6 @@ public class ProgramWindow extends JFrame {
 
         //this.add(startPage);
         this.add(selectPage);
+        //this.add(battlePage);
     }
 }

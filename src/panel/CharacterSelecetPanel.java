@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class CharacterSelecetPanel extends JPanel {
 
+    //all objects that need to be use in JFrame
     private JLabel characterImage = new JLabel("");
     private JTextArea characterDescription = new JTextArea("");
     private JRadioButton charNinjaRadio = new JRadioButton("Ninja");
@@ -55,6 +56,13 @@ public class CharacterSelecetPanel extends JPanel {
         charKnightRadio.setFont(buttonFont);
         charShamanRadio.setBounds(800,0,100,50);
         charShamanRadio.setFont(buttonFont);
+
+        //button group for character
+        ButtonGroup charRadioGroup = new ButtonGroup();
+        charRadioGroup.add(charNinjaRadio);
+        charRadioGroup.add(charArcherRadio);
+        charRadioGroup.add(charKnightRadio);
+        charRadioGroup.add(charShamanRadio);
 
         //character info
         JLabel nameLabel = new JLabel("Enter Name: ");
@@ -111,6 +119,12 @@ public class CharacterSelecetPanel extends JPanel {
         weaponRadio3.setBounds(60,650,240,50);
         weaponRadio3.setFont(buttonFont);
 
+        //button group for weapon
+        ButtonGroup weaponRadioGroup = new ButtonGroup();
+        weaponRadioGroup.add(weaponRadio1);
+        weaponRadioGroup.add(weaponRadio2);
+        weaponRadioGroup.add(weaponRadio3);
+
 
         //armor radio button
         JLabel armorLabel = new JLabel("Select Armor: ");
@@ -123,6 +137,12 @@ public class CharacterSelecetPanel extends JPanel {
         armorRadio2.setFont(buttonFont);
         armorRadio3.setBounds(300,650,240,50);
         armorRadio3.setFont(buttonFont);
+
+        //button group from armor
+        ButtonGroup armorRadioGroup = new ButtonGroup();
+        armorRadioGroup.add(armorRadio1);
+        armorRadioGroup.add(armorRadio2);
+        armorRadioGroup.add(armorRadio3);
 
 
 
