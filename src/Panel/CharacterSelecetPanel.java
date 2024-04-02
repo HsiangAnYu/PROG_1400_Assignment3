@@ -1,4 +1,4 @@
-package panel;
+package Panel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,12 +19,13 @@ public class CharacterSelecetPanel extends JPanel {
     private JTextField characterDEF = new JTextField();
     private JButton rerollButton = new JButton("Reroll");
     private JButton selectButton = new JButton("Select");
-    private JRadioButton weaponRadio1 = new JRadioButton("Weapon");
-    private JRadioButton weaponRadio2 = new JRadioButton("Weapon");
-    private JRadioButton weaponRadio3 = new JRadioButton("Weapon");
-    private JRadioButton armorRadio1 = new JRadioButton("Armor");
-    private JRadioButton armorRadio2 = new JRadioButton("Armor");
-    private JRadioButton armorRadio3 = new JRadioButton("Armor");
+    private JRadioButton weaponHalberd = new JRadioButton("Halberd");
+    private JRadioButton weaponRapier = new JRadioButton("Rapier");
+    private JRadioButton weaponIceWand = new JRadioButton("Ice Wand");
+    private JRadioButton armorChainMail = new JRadioButton("ChainMail");
+    private JRadioButton armorScutum = new JRadioButton("Scutum");
+    private JRadioButton armorAmulet = new JRadioButton("Amulet");
+    private JLabel itemImage = new JLabel();
     private JTextArea itemDescription = new JTextArea("Item Description");
 
     Font buttonFont = new Font("Comic Sans MS", Font.PLAIN, 16);
@@ -40,6 +41,9 @@ public class CharacterSelecetPanel extends JPanel {
 
         characterImage.setBounds(60,50,280,280);
         characterImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+        ImageIcon ninjaImage = new ImageIcon("Image/Ninja.png");
+        characterImage.setIcon(ninjaImage);
+
 
         characterDescription.setBounds(60,350,280,100);
         characterDescription.setMargin(new Insets(10,10,10,10));
@@ -56,6 +60,7 @@ public class CharacterSelecetPanel extends JPanel {
         charKnightRadio.setFont(buttonFont);
         charShamanRadio.setBounds(800,0,100,50);
         charShamanRadio.setFont(buttonFont);
+        charNinjaRadio.setSelected(true);
 
         //button group for character
         ButtonGroup charRadioGroup = new ButtonGroup();
@@ -112,18 +117,19 @@ public class CharacterSelecetPanel extends JPanel {
         weaponLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
         weaponLabel.setBounds(60,500,240,50);
 
-        weaponRadio1.setBounds(60,550,240,50);
-        weaponRadio1.setFont(buttonFont);
-        weaponRadio2.setBounds(60,600,240,50);
-        weaponRadio2.setFont(buttonFont);
-        weaponRadio3.setBounds(60,650,240,50);
-        weaponRadio3.setFont(buttonFont);
+        weaponHalberd.setBounds(60,550,240,50);
+        weaponHalberd.setFont(buttonFont);
+        weaponRapier.setBounds(60,600,240,50);
+        weaponRapier.setFont(buttonFont);
+        weaponIceWand.setBounds(60,650,240,50);
+        weaponIceWand.setFont(buttonFont);
+        weaponHalberd.setSelected(true);
 
         //button group for weapon
         ButtonGroup weaponRadioGroup = new ButtonGroup();
-        weaponRadioGroup.add(weaponRadio1);
-        weaponRadioGroup.add(weaponRadio2);
-        weaponRadioGroup.add(weaponRadio3);
+        weaponRadioGroup.add(weaponHalberd);
+        weaponRadioGroup.add(weaponRapier);
+        weaponRadioGroup.add(weaponIceWand);
 
 
         //armor radio button
@@ -131,22 +137,26 @@ public class CharacterSelecetPanel extends JPanel {
         armorLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
         armorLabel.setBounds(300,500,240,50);
 
-        armorRadio1.setBounds(300,550,240,50);
-        armorRadio1.setFont(buttonFont);
-        armorRadio2.setBounds(300,600,240,50);
-        armorRadio2.setFont(buttonFont);
-        armorRadio3.setBounds(300,650,240,50);
-        armorRadio3.setFont(buttonFont);
+        armorChainMail.setBounds(300,550,240,50);
+        armorChainMail.setFont(buttonFont);
+        armorScutum.setBounds(300,600,240,50);
+        armorScutum.setFont(buttonFont);
+        armorAmulet.setBounds(300,650,240,50);
+        armorAmulet.setFont(buttonFont);
 
         //button group from armor
         ButtonGroup armorRadioGroup = new ButtonGroup();
-        armorRadioGroup.add(armorRadio1);
-        armorRadioGroup.add(armorRadio2);
-        armorRadioGroup.add(armorRadio3);
+        armorRadioGroup.add(armorChainMail);
+        armorRadioGroup.add(armorScutum);
+        armorRadioGroup.add(armorAmulet);
 
+        //item image and description
+        itemImage.setBounds(550,504,192,192);
+        itemImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+        ImageIcon halberdImage = new ImageIcon("Image/Halberd.png");
+        itemImage.setIcon(halberdImage);
 
-
-        itemDescription.setBounds(600, 500, 300, 200);
+        itemDescription.setBounds(750, 500, 150, 200);
         itemDescription.setMargin(new Insets(10,10,10,10));
         itemDescription.setFont(buttonFont);
         itemDescription.setEnabled(false);//make it not able to input
@@ -174,13 +184,14 @@ public class CharacterSelecetPanel extends JPanel {
         this.add(selectButton);
 
         this.add(weaponLabel);
-        this.add(weaponRadio1);
-        this.add(weaponRadio2);
-        this.add(weaponRadio3);
+        this.add(weaponHalberd);
+        this.add(weaponRapier);
+        this.add(weaponIceWand);
         this.add(armorLabel);
-        this.add(armorRadio1);
-        this.add(armorRadio2);
-        this.add(armorRadio3);
+        this.add(armorChainMail);
+        this.add(armorScutum);
+        this.add(armorAmulet);
+        this.add(itemImage);
         this.add(itemDescription);
         this.setVisible(true);//default first page
     }

@@ -1,6 +1,6 @@
-import panel.BattlePanel;
-import panel.StartPanel;
-import panel.CharacterSelecetPanel;
+import Panel.BattlePanel;
+import Panel.StartPanel;
+import Panel.CharacterSelecetPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +30,7 @@ public class ProgramWindow extends JFrame {
         });
 
         //this.add(startPage);
-        this.add(selectPage);
-        //this.add(battlePage);
+        //this.add(selectPage);
+        this.add(battlePage);
     }
 }

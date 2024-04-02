@@ -1,4 +1,4 @@
-package panel;
+package Panel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,6 +32,8 @@ public class BattlePanel extends JPanel {
 
         monsterImage.setBounds(660,50,280,280);
         monsterImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+        ImageIcon slimeImage =  new ImageIcon("Image/slime.png");
+        monsterImage.setIcon(slimeImage);
 
         JLabel vsLabel = new JLabel("VS", SwingConstants.CENTER);
         vsLabel.setBounds(400,200,200,50);
