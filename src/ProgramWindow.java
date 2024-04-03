@@ -12,28 +12,35 @@ import java.util.Random;
 import static java.lang.Integer.parseInt;
 
 public class ProgramWindow extends JFrame {
-    private Player charSelection;
+    private Player charSelection; // charater will be generate when the select button is press
+    //weapon and armor object.
     private Weapon[] weaponArr = new Weapon[]{new Weapon("Halberd", 10), new Weapon("Rapier", 8), new Weapon("Ice Wand", 5)};
     private Armor[] armorArr = new Armor[]{new Armor("Chain Mail",100,0,10),
                                             new Armor("Sputum", 50,0,20),
                                             new Armor("Amulet",40,40,0)};
+    //all monster
+    private Monster[] monsterArr = new Monster[]{new Monster("Slime", 50,50,5,5,5),
+            new Monster("Orc", 100,100,10,10,10), new Monster("Treant",150,150,15,15,15)};
 
+    //store user weapon and armor selection
     private Weapon weaponChoice = weaponArr[0];
     private Armor armorChoice = armorArr[0];
 
     public ProgramWindow() {
+        //set frame
         this.setResizable(false);
         this.setBounds(100, 0, 1000, 800);
         this.setTitle("Assignment 3");
         this.setLayout(new CardLayout());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //Exits program when X is hit
 
+        //add panel
         StartPanel startPage = new StartPanel();
         CharacterSelecetPanel selectPage = new CharacterSelecetPanel();
         BattlePanel battlePage = new BattlePanel();
 
-
-        startPage.getStartBotton().addActionListener(new ActionListener() {
+        //change page on title page
+        startPage.getStartButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 startPage.setVisible(false);
@@ -41,55 +48,64 @@ public class ProgramWindow extends JFrame {
             }
         });
 
+        //switch to next page, select monster and generate player when button press
         selectPage.getSelectButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //create monster and character when button press
-                Monster slime = new Monster();
-                ImageIcon mImage = new ImageIcon("Image/slime.png");
-                battlePage.getMonsterImage().setIcon(mImage);
-                battlePage.getMonsterDescription().setText(slime.toString());
+                //randomly select a monster from monster array
+                switch (new Random().nextInt(0,2)) {
+                    case 0:
+                        ImageIcon m0Image = new ImageIcon("Image/slime.png");
+                        battlePage.getMonsterImage().setIcon(m0Image);
+                        battlePage.getMonsterDescription().setText(monsterArr[0].toString());
+                        break;
+                    case 1:
+                        ImageIcon m1Image = new ImageIcon("Image/Orc.png");
+                        battlePage.getMonsterImage().setIcon(m1Image);
+                        battlePage.getMonsterDescription().setText(monsterArr[1].toString());
+                        break;
+                    case 2:
+                        ImageIcon m2Image = new ImageIcon("Image/Treant.png");
+                        battlePage.getMonsterImage().setIcon(m2Image);
+                        battlePage.getMonsterDescription().setText(monsterArr[2].toString());
+                        break;
+                }
 
+                //character image
+                ImageIcon pImage;
+                //generate the character after the button press
                 if(selectPage.getCharRadio1().isSelected())
                 {
                     charSelection = new Ninja(selectPage.getCharacterName().getText(),weaponChoice,armorChoice,
                             parseInt(selectPage.getCharacterHP().getText()), parseInt(selectPage.getCharacterMP().getText()),
                             parseInt(selectPage.getCharacterATK().getText()), parseInt(selectPage.getCharacterDEF().getText()));
-
-                    battlePage.getPlayerDescription().setText(charSelection.toString());
-                    ImageIcon pImage = new ImageIcon("Image/Ninja.png");
-                    battlePage.getPlayerImage().setIcon(pImage);
+                    pImage = new ImageIcon("Image/Ninja.png");
                 }
                 else if(selectPage.getCharRadio2().isSelected())
                 {
                     charSelection = new Archer(selectPage.getCharacterName().getText(),weaponChoice,armorChoice,
                             parseInt(selectPage.getCharacterHP().getText()), parseInt(selectPage.getCharacterMP().getText()),
                             parseInt(selectPage.getCharacterATK().getText()), parseInt(selectPage.getCharacterDEF().getText()));
-
-                    battlePage.getPlayerDescription().setText(charSelection.toString());
-                    ImageIcon pImage = new ImageIcon("Image/Archer.png");
-                    battlePage.getPlayerImage().setIcon(pImage);
+                    pImage = new ImageIcon("Image/Archer.png");
                 }
                 else if(selectPage.getCharRadio3().isSelected())
                 {
                     charSelection = new Knight(selectPage.getCharacterName().getText(),weaponChoice,armorChoice,
                             parseInt(selectPage.getCharacterHP().getText()), parseInt(selectPage.getCharacterMP().getText()),
                             parseInt(selectPage.getCharacterATK().getText()), parseInt(selectPage.getCharacterDEF().getText()));
-
-                    battlePage.getPlayerDescription().setText(charSelection.toString());
-                    ImageIcon pImage = new ImageIcon("Image/Knight.png");
-                    battlePage.getPlayerImage().setIcon(pImage);
+                    pImage = new ImageIcon("Image/Knight.png");
                 }
-                else if(selectPage.getCharRadio4().isSelected())
+                else
                 {
                     charSelection = new Shaman(selectPage.getCharacterName().getText(),weaponChoice,armorChoice,
                             parseInt(selectPage.getCharacterHP().getText()), parseInt(selectPage.getCharacterMP().getText()),
                             parseInt(selectPage.getCharacterATK().getText()), parseInt(selectPage.getCharacterDEF().getText()));
-
-                    battlePage.getPlayerDescription().setText(charSelection.toString());
-                    ImageIcon pImage = new ImageIcon("Image/Shaman.png");
-                    battlePage.getPlayerImage().setIcon(pImage);
+                    pImage = new ImageIcon("Image/Shaman.png");
                 }
+
+                //set player info
+                battlePage.getPlayerImage().setIcon(pImage);
+                battlePage.getPlayerDescription().setText(charSelection.toString());
 
                 //change page
                 selectPage.setVisible(false);
@@ -213,6 +229,7 @@ public class ProgramWindow extends JFrame {
             }
         });
 
+        //add all panel
         this.add(startPage);
         this.add(selectPage);
         this.add(battlePage);

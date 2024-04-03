@@ -6,13 +6,13 @@ import java.util.Random;
 
 public class CharacterSelecetPanel extends JPanel {
     //array for radio button
-    private String[] charArr = new String[]{"Ninja", "Archer", "Knight", "Shaman"};
-    private String[] weaponArr = new String[]{"Halberd", "Rapier", "Ice Wand"};
-    private String[] armorArr  = new String[]{"Chain Mail", "Sputum", "Amulet"};
+    private String[] charArr = new String[]{"Ninja", "Archer", "Knight", "Shaman"}; //for character type
+    private String[] weaponArr = new String[]{"Halberd", "Rapier", "Ice Wand"}; // for weapon name
+    private String[] armorArr  = new String[]{"Chain Mail", "Sputum", "Amulet"}; //for armor name
 
     //all objects that need to be use in JFrame
     private JLabel characterImage = new JLabel("");
-    private JTextArea characterDescription = new JTextArea("This is Ninja, it has 5 bonus def");
+    private JTextArea characterDescription = new JTextArea("This is Ninja, it has 5 bonus def"); //default text
     private JRadioButton charRadio1 = new JRadioButton(charArr[0]);
     private JRadioButton charRadio2 = new JRadioButton(charArr[1]);
     private JRadioButton charRadio3 = new JRadioButton(charArr[2]);
@@ -33,9 +33,11 @@ public class CharacterSelecetPanel extends JPanel {
     private JLabel itemImage = new JLabel();
     private JTextArea itemDescription = new JTextArea("Halberd\nAtk + 10");
 
+    //font for this panel
     Font buttonFont = new Font("Comic Sans MS", Font.PLAIN, 16);
 
     public CharacterSelecetPanel() {
+        //set panel size
         this.setBounds(0,0, super.getWidth(), super.getHeight());
         this.setLayout(null);
 
@@ -46,9 +48,8 @@ public class CharacterSelecetPanel extends JPanel {
 
         characterImage.setBounds(60,50,280,280);
         characterImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
-        ImageIcon ninjaImage = new ImageIcon("Image/Ninja.png");
+        ImageIcon ninjaImage = new ImageIcon("Image/Ninja.png"); //default image
         characterImage.setIcon(ninjaImage);
-
 
         characterDescription.setBounds(60,350,280,100);
         characterDescription.setMargin(new Insets(10,10,10,10));
@@ -159,7 +160,7 @@ public class CharacterSelecetPanel extends JPanel {
         //item image and description
         itemImage.setBounds(550,504,192,192);
         itemImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
-        ImageIcon halberdImage = new ImageIcon("Image/Halberd.png");
+        ImageIcon halberdImage = new ImageIcon("Image/Halberd.png"); //default image
         itemImage.setIcon(halberdImage);
 
         itemDescription.setBounds(750, 500, 150, 200);
@@ -168,7 +169,7 @@ public class CharacterSelecetPanel extends JPanel {
         itemDescription.setEnabled(false);//make it not able to input
         itemDescription.setDisabledTextColor(Color.black);//change text color
 
-
+        //add to panel
         this.add(characterLabel);
         this.add(characterImage);
         this.add(characterDescription);

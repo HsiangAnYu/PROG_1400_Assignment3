@@ -6,20 +6,20 @@ import Item.Weapon;
 import java.util.Random;
 
 public class Monster extends Character{
-    private int exp = 5;
+    private int exp;
 
-    public Monster(){
-        this.setName("Slime");
-        this.setMp(new Random().nextInt(50,80));
-        this.setHp(new Random().nextInt(50,80));
-        this.setAtk(new Random().nextInt(5,10));
-        this.setDef(new Random().nextInt(5,10));
+    public Monster(String name, int hp, int mp, int atk, int def, int exp){
+        this.setName(name);
+        this.setMp(mp);
+        this.setHp(hp);
+        this.setAtk(atk);
+        this.setDef(def);
+        this.exp = exp;
     }
 
     @Override
     public String toString() {
-        return "Class: " + this.getName() + "\n" +
-                "Name: Bob"  + "\n" +
+        return "Type: " + this.getName() + "\n" +
                 "HP: " + this.getHp() + "\n" +
                 "MP: " + this.getMp() + "\n" +
                 "Atk: " + this.getAtk() +  "\n" +

@@ -10,15 +10,16 @@ public class BattlePanel extends JPanel {
     private JLabel monsterImage = new JLabel();
     private JTextArea playerDescription = new JTextArea();
     private JTextArea monsterDescription = new JTextArea();
-    private JTextArea battleDescription = new JTextArea();
 
+    //font for this panel
     Font descriptionFont = new Font("Comic Sans MS", Font.PLAIN, 16);
 
     public BattlePanel () {
+        //set panel size
         this.setBounds(0,0, super.getWidth(), super.getHeight());
         this.setLayout(null);
 
-        //image
+        //character and monster image
         JLabel characterLabel = new JLabel("Character", SwingConstants.CENTER);
         characterLabel.setBounds(60,0,280,50);
         characterLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
@@ -51,13 +52,6 @@ public class BattlePanel extends JPanel {
         monsterDescription.setEnabled(false);//make it not able to input
         monsterDescription.setDisabledTextColor(Color.black);//change text color
 
-        //battle description
-        battleDescription.setBounds(340, 400, 320, 300);
-        battleDescription.setMargin(new Insets(10,10,10,10));
-        battleDescription.setFont(descriptionFont);
-        battleDescription.setEnabled(false);//make it not able to input
-        battleDescription.setDisabledTextColor(Color.black);//change text color
-
         //add objects to panel
         this.add(characterLabel);
         this.add(playerImage);
@@ -66,7 +60,6 @@ public class BattlePanel extends JPanel {
         this.add(vsLabel);
         this.add(playerDescription);
         this.add(monsterDescription);
-        this.add(battleDescription);
     }
 
     public JLabel getPlayerImage() {
@@ -85,11 +78,4 @@ public class BattlePanel extends JPanel {
         return monsterDescription;
     }
 
-    public JTextArea getBattleDescription() {
-        return battleDescription;
-    }
-
-    public Font getDescriptionFont() {
-        return descriptionFont;
-    }
 }
