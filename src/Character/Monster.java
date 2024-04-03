@@ -19,7 +19,7 @@ public class Monster extends Character{
     @Override
     public String toString() {
         return "Class: " + this.getName() + "\n" +
-                "Name: Bob"  +
+                "Name: Bob"  + "\n" +
                 "HP: " + this.getHp() + "\n" +
                 "MP: " + this.getMp() + "\n" +
                 "Atk: " + this.getAtk() +  "\n" +

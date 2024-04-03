@@ -6,7 +6,7 @@ import Item.Weapon;
 public class Ninja extends Player{
     private int defBonus = 5;
 
-    public Ninja(String playerName, Weapon weapon, Armor armor){
+    public Ninja(String playerName, Weapon weapon, Armor armor, int hp, int mp, int atk, int def){
         this.setPlayerName(playerName);
         this.setWeapon(weapon);
         this.setArmor(armor);
@@ -14,9 +14,10 @@ public class Ninja extends Player{
         //assign name
         this.setName("Ninja");
         //assign random number to states
-        this.randomState();
-        //assign description
-        this.setDescription("This is a Ninja, has 5 def bonus");
+        this.setHp(hp);
+        this.setMp(mp);
+        this.setAtk(atk);
+        this.setDef(def);
     }
 
     @Override

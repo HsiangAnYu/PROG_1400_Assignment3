@@ -6,7 +6,7 @@ import Item.Weapon;
 public class Shaman extends Player{
     private int mpBonus = 50;
 
-    public Shaman(String playerName, Weapon weapon, Armor armor){
+    public Shaman(String playerName, Weapon weapon, Armor armor, int hp, int mp, int atk, int def){
         this.setPlayerName(playerName);
         this.setWeapon(weapon);
         this.setArmor(armor);
@@ -14,9 +14,10 @@ public class Shaman extends Player{
         //assign name
         this.setName("Shaman");
         //assign random number to states
-        this.randomState();
-        //assign description
-        this.setDescription("This is a Shaman, has 50 mp bonus");
+        this.setHp(hp);
+        this.setMp(mp);
+        this.setAtk(atk);
+        this.setDef(def);
     }
 
     @Override

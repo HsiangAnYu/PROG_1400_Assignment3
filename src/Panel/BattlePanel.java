@@ -6,7 +6,7 @@ import java.awt.*;
 public class BattlePanel extends JPanel {
 
     //all objects that need to be use in JFrame
-    private JLabel characterImage = new JLabel();
+    private JLabel playerImage = new JLabel();
     private JLabel monsterImage = new JLabel();
     private JTextArea playerDescription = new JTextArea();
     private JTextArea monsterDescription = new JTextArea();
@@ -23,8 +23,8 @@ public class BattlePanel extends JPanel {
         characterLabel.setBounds(60,0,280,50);
         characterLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
 
-        characterImage.setBounds(60,50,280,280);
-        characterImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+        playerImage.setBounds(60,50,280,280);
+        playerImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
         JLabel monserLabel = new JLabel("Monster", SwingConstants.CENTER);
         monserLabel.setBounds(660,0,280,50);
@@ -32,8 +32,6 @@ public class BattlePanel extends JPanel {
 
         monsterImage.setBounds(660,50,280,280);
         monsterImage.setBorder(BorderFactory.createLineBorder(Color.black, 1));
-        ImageIcon slimeImage =  new ImageIcon("Image/slime.png");
-        monsterImage.setIcon(slimeImage);
 
         JLabel vsLabel = new JLabel("VS", SwingConstants.CENTER);
         vsLabel.setBounds(400,200,200,50);
@@ -62,13 +60,36 @@ public class BattlePanel extends JPanel {
 
         //add objects to panel
         this.add(characterLabel);
-        this.add(characterImage);
+        this.add(playerImage);
         this.add(monsterImage);
         this.add(monserLabel);
         this.add(vsLabel);
         this.add(playerDescription);
         this.add(monsterDescription);
         this.add(battleDescription);
-        this.setVisible(true);//default first page
+    }
+
+    public JLabel getPlayerImage() {
+        return playerImage;
+    }
+
+    public JLabel getMonsterImage() {
+        return monsterImage;
+    }
+
+    public JTextArea getPlayerDescription() {
+        return playerDescription;
+    }
+
+    public JTextArea getMonsterDescription() {
+        return monsterDescription;
+    }
+
+    public JTextArea getBattleDescription() {
+        return battleDescription;
+    }
+
+    public Font getDescriptionFont() {
+        return descriptionFont;
     }
 }

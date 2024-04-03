@@ -14,6 +14,8 @@ public class StartPanel extends JPanel {
 
         this.add(startBotton);
         this.setVisible(true);//default first page
+
+        this.setVisible(true);//default first page
     }
 
     public JButton getStartBotton() {

@@ -6,7 +6,7 @@ import Item.Weapon;
 public class Knight extends Player{
     private int hpBonus = 50;
 
-    public Knight(String playerName, Weapon weapon, Armor armor){
+    public Knight(String playerName, Weapon weapon, Armor armor, int hp, int mp, int atk, int def){
         this.setPlayerName(playerName);
         this.setWeapon(weapon);
         this.setArmor(armor);
@@ -14,9 +14,10 @@ public class Knight extends Player{
         //assign name
         this.setName("Knight");
         //assign random number to states
-        this.randomState();
-        //assign description
-        this.setDescription("This is a Knight, has 50 hp bonus");
+        this.setHp(hp);
+        this.setMp(mp);
+        this.setAtk(atk);
+        this.setDef(def);
     }
 
     @Override

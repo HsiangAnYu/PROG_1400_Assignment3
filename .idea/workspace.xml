@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5663a1a-f965-411e-a9e9-8f93b6b26baa" name="Changes" comment="class">
-      <change beforePath="$PROJECT_DIR$/src/Item/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character/Ninja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character/Ninja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character/Shaman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character/Shaman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel/CharacterSelecetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/CharacterSelecetPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProgramWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProgramWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712032209964</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="class">
+      <option name="closed" value="true" />
+      <created>1712034879436</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712034879436</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

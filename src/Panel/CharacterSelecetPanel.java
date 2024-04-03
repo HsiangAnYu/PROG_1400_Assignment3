@@ -5,29 +5,33 @@ import java.awt.*;
 import java.util.Random;
 
 public class CharacterSelecetPanel extends JPanel {
+    //array for radio button
+    private String[] charArr = new String[]{"Ninja", "Archer", "Knight", "Shaman"};
+    private String[] weaponArr = new String[]{"Halberd", "Rapier", "Ice Wand"};
+    private String[] armorArr  = new String[]{"Chain Mail", "Sputum", "Amulet"};
 
     //all objects that need to be use in JFrame
     private JLabel characterImage = new JLabel("");
-    private JTextArea characterDescription = new JTextArea("");
-    private JRadioButton charNinjaRadio = new JRadioButton("Ninja");
-    private JRadioButton charArcherRadio = new JRadioButton("Archer");
-    private JRadioButton charKnightRadio = new JRadioButton("Knight");
-    private JRadioButton charShamanRadio = new JRadioButton("Shaman");
-    private JTextField characterName = new JTextField();
+    private JTextArea characterDescription = new JTextArea("This is Ninja, it has 5 bonus def");
+    private JRadioButton charRadio1 = new JRadioButton(charArr[0]);
+    private JRadioButton charRadio2 = new JRadioButton(charArr[1]);
+    private JRadioButton charRadio3 = new JRadioButton(charArr[2]);
+    private JRadioButton charRadio4 = new JRadioButton(charArr[3]);
+    private JTextField characterName = new JTextField("Player");
     private JTextField characterHP = new JTextField(String.valueOf(new Random().nextInt(100,200)));
     private JTextField characterMP = new JTextField(String.valueOf(new Random().nextInt(100,200)));
     private JTextField characterATK = new JTextField(String.valueOf(new Random().nextInt(10,20)));
     private JTextField characterDEF = new JTextField(String.valueOf(new Random().nextInt(10,20)));
     private JButton rerollButton = new JButton("Reroll");
     private JButton selectButton = new JButton("Select");
-    private JRadioButton weaponHalberd = new JRadioButton("Halberd");
-    private JRadioButton weaponRapier = new JRadioButton("Rapier");
-    private JRadioButton weaponIceWand = new JRadioButton("Ice Wand");
-    private JRadioButton armorChainMail = new JRadioButton("ChainMail");
-    private JRadioButton armorScutum = new JRadioButton("Scutum");
-    private JRadioButton armorAmulet = new JRadioButton("Amulet");
+    private JRadioButton weaponRadio1 = new JRadioButton(weaponArr[0]);
+    private JRadioButton weaponRadio2 = new JRadioButton(weaponArr[1]);
+    private JRadioButton weaponRadio3 = new JRadioButton(weaponArr[2]);
+    private JRadioButton armorRadio1 = new JRadioButton(armorArr[0]);
+    private JRadioButton armorRadio2 = new JRadioButton(armorArr[1]);
+    private JRadioButton armorRadio3 = new JRadioButton(armorArr[2]);
     private JLabel itemImage = new JLabel();
-    private JTextArea itemDescription = new JTextArea("Item Description");
+    private JTextArea itemDescription = new JTextArea("Halberd\nAtk + 10");
 
     Font buttonFont = new Font("Comic Sans MS", Font.PLAIN, 16);
 
@@ -53,22 +57,22 @@ public class CharacterSelecetPanel extends JPanel {
         characterDescription.setDisabledTextColor(Color.black);//change text color
 
         //character select
-        charNinjaRadio.setBounds(500, 0, 100, 50);
-        charNinjaRadio.setFont(buttonFont);
-        charArcherRadio.setBounds(600,0,100,50);
-        charArcherRadio.setFont(buttonFont);
-        charKnightRadio.setBounds(700,0,100,50);
-        charKnightRadio.setFont(buttonFont);
-        charShamanRadio.setBounds(800,0,100,50);
-        charShamanRadio.setFont(buttonFont);
-        charNinjaRadio.setSelected(true);
+        charRadio1.setBounds(500, 0, 100, 50);
+        charRadio1.setFont(buttonFont);
+        charRadio2.setBounds(600,0,100,50);
+        charRadio2.setFont(buttonFont);
+        charRadio3.setBounds(700,0,100,50);
+        charRadio3.setFont(buttonFont);
+        charRadio4.setBounds(800,0,100,50);
+        charRadio4.setFont(buttonFont);
+        charRadio1.setSelected(true);
 
         //button group for character
         ButtonGroup charRadioGroup = new ButtonGroup();
-        charRadioGroup.add(charNinjaRadio);
-        charRadioGroup.add(charArcherRadio);
-        charRadioGroup.add(charKnightRadio);
-        charRadioGroup.add(charShamanRadio);
+        charRadioGroup.add(charRadio1);
+        charRadioGroup.add(charRadio2);
+        charRadioGroup.add(charRadio3);
+        charRadioGroup.add(charRadio4);
 
         //character info
         JLabel nameLabel = new JLabel("Enter Name: ");
@@ -118,19 +122,19 @@ public class CharacterSelecetPanel extends JPanel {
         weaponLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
         weaponLabel.setBounds(60,500,240,50);
 
-        weaponHalberd.setBounds(60,550,240,50);
-        weaponHalberd.setFont(buttonFont);
-        weaponRapier.setBounds(60,600,240,50);
-        weaponRapier.setFont(buttonFont);
-        weaponIceWand.setBounds(60,650,240,50);
-        weaponIceWand.setFont(buttonFont);
-        weaponHalberd.setSelected(true);
+        weaponRadio1.setBounds(60,550,240,50);
+        weaponRadio1.setFont(buttonFont);
+        weaponRadio2.setBounds(60,600,240,50);
+        weaponRadio2.setFont(buttonFont);
+        weaponRadio3.setBounds(60,650,240,50);
+        weaponRadio3.setFont(buttonFont);
+        weaponRadio1.setSelected(true);
 
         //button group for weapon
         ButtonGroup weaponRadioGroup = new ButtonGroup();
-        weaponRadioGroup.add(weaponHalberd);
-        weaponRadioGroup.add(weaponRapier);
-        weaponRadioGroup.add(weaponIceWand);
+        weaponRadioGroup.add(weaponRadio1);
+        weaponRadioGroup.add(weaponRadio2);
+        weaponRadioGroup.add(weaponRadio3);
 
 
         //armor radio button
@@ -138,19 +142,19 @@ public class CharacterSelecetPanel extends JPanel {
         armorLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
         armorLabel.setBounds(300,500,240,50);
 
-        armorChainMail.setBounds(300,550,240,50);
-        armorChainMail.setFont(buttonFont);
-        armorScutum.setBounds(300,600,240,50);
-        armorScutum.setFont(buttonFont);
-        armorAmulet.setBounds(300,650,240,50);
-        armorAmulet.setFont(buttonFont);
-        armorChainMail.setSelected(true);
+        armorRadio1.setBounds(300,550,240,50);
+        armorRadio1.setFont(buttonFont);
+        armorRadio2.setBounds(300,600,240,50);
+        armorRadio2.setFont(buttonFont);
+        armorRadio3.setBounds(300,650,240,50);
+        armorRadio3.setFont(buttonFont);
+        armorRadio1.setSelected(true);
 
         //button group from armor
         ButtonGroup armorRadioGroup = new ButtonGroup();
-        armorRadioGroup.add(armorChainMail);
-        armorRadioGroup.add(armorScutum);
-        armorRadioGroup.add(armorAmulet);
+        armorRadioGroup.add(armorRadio1);
+        armorRadioGroup.add(armorRadio2);
+        armorRadioGroup.add(armorRadio3);
 
         //item image and description
         itemImage.setBounds(550,504,192,192);
@@ -168,10 +172,10 @@ public class CharacterSelecetPanel extends JPanel {
         this.add(characterLabel);
         this.add(characterImage);
         this.add(characterDescription);
-        this.add(charNinjaRadio);
-        this.add(charKnightRadio);
-        this.add(charShamanRadio);
-        this.add(charArcherRadio);
+        this.add(charRadio1);
+        this.add(charRadio3);
+        this.add(charRadio4);
+        this.add(charRadio2);
         this.add(nameLabel);
         this.add(characterName);
         this.add(characterHPLabel);
@@ -186,15 +190,98 @@ public class CharacterSelecetPanel extends JPanel {
         this.add(selectButton);
 
         this.add(weaponLabel);
-        this.add(weaponHalberd);
-        this.add(weaponRapier);
-        this.add(weaponIceWand);
+        this.add(weaponRadio1);
+        this.add(weaponRadio2);
+        this.add(weaponRadio3);
         this.add(armorLabel);
-        this.add(armorChainMail);
-        this.add(armorScutum);
-        this.add(armorAmulet);
+        this.add(armorRadio1);
+        this.add(armorRadio2);
+        this.add(armorRadio3);
         this.add(itemImage);
         this.add(itemDescription);
-        this.setVisible(true);//default first page
+    }
+
+    public JLabel getCharacterImage() {
+        return characterImage;
+    }
+
+    public JTextArea getCharacterDescription() {
+        return characterDescription;
+    }
+
+    public JRadioButton getCharRadio1() {
+        return charRadio1;
+    }
+
+    public JRadioButton getCharRadio2() {
+        return charRadio2;
+    }
+
+    public JRadioButton getCharRadio3() {
+        return charRadio3;
+    }
+
+    public JRadioButton getCharRadio4() {
+        return charRadio4;
+    }
+
+    public JTextField getCharacterName() {
+        return characterName;
+    }
+
+    public JTextField getCharacterHP() {
+        return characterHP;
+    }
+
+    public JTextField getCharacterMP() {
+        return characterMP;
+    }
+
+    public JTextField getCharacterATK() {
+        return characterATK;
+    }
+
+    public JTextField getCharacterDEF() {
+        return characterDEF;
+    }
+
+    public JButton getRerollButton() {
+        return rerollButton;
+    }
+
+    public JButton getSelectButton() {
+        return selectButton;
+    }
+
+    public JRadioButton getWeaponRadio1() {
+        return weaponRadio1;
+    }
+
+    public JRadioButton getWeaponRadio2() {
+        return weaponRadio2;
+    }
+
+    public JRadioButton getWeaponRadio3() {
+        return weaponRadio3;
+    }
+
+    public JRadioButton getArmorRadio1() {
+        return armorRadio1;
+    }
+
+    public JRadioButton getArmorRadio2() {
+        return armorRadio2;
+    }
+
+    public JRadioButton getArmorRadio3() {
+        return armorRadio3;
+    }
+
+    public JLabel getItemImage() {
+        return itemImage;
+    }
+
+    public JTextArea getItemDescription() {
+        return itemDescription;
     }
 }
